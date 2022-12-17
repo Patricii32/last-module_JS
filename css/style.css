@@ -140,6 +140,7 @@ input[type=checkbox] {
 }
 .comproj_info_slaider_vector{
     margin-right: 30px;
+    cursor: pointer;
 }
 .comproj_info_slaider_vector:not(:first-child){
     margin-left: 30px;
@@ -166,6 +167,7 @@ input[type=checkbox] {
 }
 
 .comproj_info_slaider_circle:hover{
+    cursor: pointer;
     background-color: white;
 }
 .comproj_content{
@@ -180,7 +182,6 @@ input[type=checkbox] {
     width: 100%;
 }
 .comproj_content_link{
-    
     padding-bottom: 6px;
     font-family: 'Yeseva One';
     font-style: normal;
@@ -197,9 +198,10 @@ input[type=checkbox] {
     color: #E3B873;
 }
 .comproj_content_link:hover{
+    cursor: pointer;
     padding-bottom: 5px;
     border-bottom: 1px solid #E3B873;
-    color: #E3B873;
+    color: #d29128;
 }
 .comproj_content_image{
     display: none;
