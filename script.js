@@ -20,8 +20,10 @@ const dotsArr = document.querySelectorAll(".comproj_info_slaider_circle");
 const images = document.querySelector(".comproj_content_image_div");
 const imagesArr = images.querySelectorAll(".comproj_content_image");
 initArrows();
-initDots();
-initProj();
+codeOptimization(dotsArr, dots, "dot-active");//initDots
+codeOptimization(projectsArr, projects, "project-active");//initProj
+// initDots();
+// initProj();
 
 function initArrows(){
     arrows.forEach(arrow =>{
@@ -38,49 +40,59 @@ function initArrows(){
 
     })
 }
-function initDots(){
-    dotsArr[0].addEventListener("click",()=>{
-        dots.querySelector(".dot-active").classList.remove("dot-active");
-        dotsArr[0].classList.add("dot-active");
-        let nextNumber = +dots.querySelector(".dot-active").dataset.index;
-        moveSlider(nextNumber);
-    });
-    dotsArr[1].addEventListener("click",()=>{
-        dots.querySelector(".dot-active").classList.remove("dot-active");
-        dotsArr[1].classList.add("dot-active");
-        let nextNumber = +dots.querySelector(".dot-active").dataset.index;
-        moveSlider(nextNumber);
-    });
-            
-    dotsArr[2].addEventListener("click",()=>{
-        dots.querySelector(".dot-active").classList.remove("dot-active");
-        dotsArr[2].classList.add("dot-active");
-        let nextNumber = +dots.querySelector(".dot-active").dataset.index;
-        moveSlider(nextNumber);
-    });
-}
-function initProj(){
-    projectsArr[0].addEventListener("click",()=>{
-        projects.querySelector(".project-active").classList.remove("project-active");
-        projectsArr[0].classList.add("project-active");
-        let nextNumber = +projects.querySelector(".project-active").dataset.index;    
-        moveSlider(nextNumber);
-    });
-    projectsArr[1].addEventListener("click",()=>{
-        projects.querySelector(".project-active").classList.remove("project-active");
-        projectsArr[1].classList.add("project-active");
-        let nextNumber = +projects.querySelector(".project-active").dataset.index;
-        moveSlider(nextNumber);
-    });
-        
-    projectsArr[2].addEventListener("click",()=>{
-        projects.querySelector(".project-active").classList.remove("project-active");
-        projectsArr[2].classList.add("project-active");
-        let nextNumber = +projects.querySelector(".project-active").dataset.index;
-        moveSlider(nextNumber);
-    });
-}
 
+function codeOptimization(arr, itemNode, activeClass){
+    arr.forEach(itemArr =>{
+        itemArr.addEventListener("click",()=>{
+            itemNode.querySelector(`.${activeClass}`).classList.remove(`${activeClass}`);
+            itemArr.classList.add(`${activeClass}`);
+            let nextNumber = +itemNode.querySelector(`.${activeClass}`).dataset.index;
+            moveSlider(nextNumber);
+        });
+    })
+}
+// function initDots(){
+//     dotsArr[0].addEventListener("click",()=>{
+//         dots.querySelector(".dot-active").classList.remove("dot-active");
+//         dotsArr[0].classList.add("dot-active");
+//         let nextNumber = +dots.querySelector(".dot-active").dataset.index;
+//         moveSlider(nextNumber);
+//     });
+//     dotsArr[1].addEventListener("click",()=>{
+//         dots.querySelector(".dot-active").classList.remove("dot-active");
+//         dotsArr[1].classList.add("dot-active");
+//         let nextNumber = +dots.querySelector(".dot-active").dataset.index;
+//         moveSlider(nextNumber);
+//     });
+            
+//     dotsArr[2].addEventListener("click",()=>{
+//         dots.querySelector(".dot-active").classList.remove("dot-active");
+//         dotsArr[2].classList.add("dot-active");
+//         let nextNumber = +dots.querySelector(".dot-active").dataset.index;
+//         moveSlider(nextNumber);
+//     });
+// }
+// function initProj(){
+//     projectsArr[0].addEventListener("click",()=>{
+//         projects.querySelector(".project-active").classList.remove("project-active");
+//         projectsArr[0].classList.add("project-active");
+//         let nextNumber = +projects.querySelector(".project-active").dataset.index;    
+//         moveSlider(nextNumber);
+//     });
+//     projectsArr[1].addEventListener("click",()=>{
+//         projects.querySelector(".project-active").classList.remove("project-active");
+//         projectsArr[1].classList.add("project-active");
+//         let nextNumber = +projects.querySelector(".project-active").dataset.index;
+//         moveSlider(nextNumber);
+//     });
+        
+//     projectsArr[2].addEventListener("click",()=>{
+//         projects.querySelector(".project-active").classList.remove("project-active");
+//         projectsArr[2].classList.add("project-active");
+//         let nextNumber = +projects.querySelector(".project-active").dataset.index;
+//         moveSlider(nextNumber);
+//     });
+// }
 
 function moveSlider(num){
         images.querySelector(".active").classList.remove("active");
