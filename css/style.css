@@ -1,0 +1,213 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0 0;
+}
+html{
+    font-family: 'Yeseva One','Nunito Sans','Open Sans', sans-serif;
+
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}    
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+/*COMPROJ*/
+.comproj{
+    background: #131313;
+}
+.container-comproj{
+    padding: 0 134px;
+    padding-top: 107px; 
+    padding-bottom: 416px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.comproj_info{
+    padding-top: 70px;
+    max-width: 442px;
+}
+.comproj_info_heading{
+    padding-bottom: 34px;
+    width: 253px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+.comproj_info_description{
+    padding-bottom: 42px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.comproj_content_image_mobile-block{
+    display: none;
+    margin-bottom: 36px;
+    background-image: url(../img/comproj.jpg);
+    width: 100%;
+    height: 241px;
+    background-size: cover;
+}
+.comproj_content_image_mobile_list{
+    display: flex;
+    justify-content: space-between;
+    padding: 103px 18px 0;
+}
+.comproj_content_image_mobile_btn{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background: #E3B873;
+}
+.comproj_content_image_mobile_list{
+    position: relative;
+}
+.comproj_content_image_mobile_btn_svg1{
+    position: relative;
+    top: 12px;
+    left: 12px;
+}
+.comproj_content_image_mobile_btn_svg2{
+    position: relative;
+    top: 12px;
+    left: 16px;
+}
+.comproj_content_image_mobile_btn:hover{
+    background: #ffffff;
+}
+.comproj_content_image_mobile_btn:hover .comproj_content_image_mobile_btn_svg{
+    fill: #E3B873;
+}
+.comproj_info_row{
+    display: flex;  
+
+}
+.comproj_info_row:not(:last-child){
+    padding-bottom: 34px;
+}
+.comproj_info_item{
+    flex: 1;
+    max-width: 190px;
+}
+.comproj_info_item_heading{
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #E3B873;   
+}
+
+.comproj_info_item_description{
+    width: 100px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.comproj_info_slaider{
+    display: flex;
+    padding-top: 37px;
+}
+.comproj_info_slaider_vector{
+    margin-right: 30px;
+}
+.comproj_info_slaider_vector:not(:first-child){
+    margin-left: 30px;
+
+}
+.comproj_info_slaider_vector:hover .comproj_info_slaider_vector_color{
+    fill: #E3B873;
+}
+.comproj_info_slaider_list{
+    position: relative;
+    top: -2.5px;
+}
+.comproj_info_slaider_circle{
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}
+.comproj_info_slaider_circle:not(:first-child){
+    margin-left: 17px;
+}
+.dot-active{
+    background-color: white;
+}
+
+.comproj_info_slaider_circle:hover{
+    background-color: white;
+}
+.comproj_content{
+    max-width: 679px;
+    min-width: 340px;
+}
+
+.comproj_content_list{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+}
+.comproj_content_link{
+    
+    padding-bottom: 6px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+.project-active{
+    
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E3B873;
+    color: #E3B873;
+}
+.comproj_content_link:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E3B873;
+    color: #E3B873;
+}
+.comproj_content_image{
+    display: none;
+    flex-shrink: 0;
+    padding-top: 44px;
+    width: 100%;
+    height: auto;
+}
+.active{
+    display: block;
+}
